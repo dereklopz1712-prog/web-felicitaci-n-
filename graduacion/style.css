@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4ef, #eadcff, #fff0f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 25px 15px;
+    color: #68465f;
+}
+
+.fondo {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 20%, #ffffffb0, transparent 30%),
+        radial-gradient(circle at 85% 80%, #f9b9d980, transparent 35%);
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.inicio, .carta {
+    text-align: center;
+    padding: 45px 35px;
+    border: 1px solid #ffffffb5;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 20px 60px #b77ba52b;
+    backdrop-filter: blur(15px);
+    animation: aparecer 1.2s ease;
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+.pequeno, .etiqueta {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #bd79a0;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #d46b9a;
+    font-size: clamp(48px, 10vw, 75px);
+    margin: 15px 0;
+}
+
+.intro {
+    color: #99748e;
+    font-size: 14px;
+    margin: 20px 0 30px;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #e88bb4, #bb8be8);
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 25px #d98bb45c;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 30px #d98bb480;
+}
+
+.firma {
+    font-family: 'Great Vibes', cursive;
+    font-size: 25px;
+    margin-top: 30px;
+    color: #bd82a7;
+}
+
+.oculta {
+    display: none;
+}
+
+.carta {
+    padding: 40px 35px;
+    animation: subir 1s ease;
+}
+
+.decoracion {
+    font-size: 45px;
+    color: #e7a3c6;
+}
+
+.separador {
+    color: #df8db4;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.mensaje {
+    font-size: 14px;
+    line-height: 2;
+    margin: 20px 0;
+    color: #795e76;
+}
+
+.frase {
+    background: linear-gradient(135deg, #fff0f6, #f2e9ff);
+    border-left: 4px solid #df93ba;
+    padding: 22px;
+    border-radius: 15px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 29px;
+    color: #bd6d9d;
+    margin: 25px 0;
+}
+
+.especial {
+    color: #c56d9b;
+    font-weight: 500;
+}
+
+.regalo {
+    font-size: 65px;
+    margin: 25px 0 10px;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #d46b9a;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.final {
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 20px 0;
+}
+
+.firma-final {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    color: #d46b9a;
+    margin: 25px 0;
+}
+
+.boton-final {
+    margin-top: 10px;
+}
+
+.extra {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #c25f96;
+    animation: aparecer 1s ease;
+}
+
+.particula {
+    position: fixed;
+    top: -30px;
+    z-index: 5;
+    pointer-events: none;
+    animation: caer linear forwards;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    .inicio, .carta {
+        padding: 35px 22px;
+    }
+
+    .mensaje {
+        font-size: 13px;
+    }
+
+    .frase {
+        font-size: 25px;
+    }
+}
